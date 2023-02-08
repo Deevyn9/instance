@@ -1,20 +1,30 @@
 import React from "react";
 
-type Props = {
-    toggle: boolean;
-    clickHandler: () => void;
-};
+interface Props {
+  clickHandler: () => void;
+  toggle: boolean;
+}
 
 const Header: React.FC<Props> = ({ toggle, clickHandler }) => {
   return (
     <header className="calc-width w-screen border-2 border-red-400 h-20 items-center flex px-3">
       {/* Creating a burger menu for mobile to toggle the side nav */}
-      <div className="space-y-2 cursor-pointer" onClick={{clickHandler}}>
-        <span className="block w-8 h-0.5 bg-gray-600"></span>
-        <span className="block w-5 h-0.5 bg-gray-600"></span>
+      <div onClick={clickHandler} className="z-50 lg:hidden">
+        {toggle ? (
+          <div className="cursor-pointer relative h-10 w-10 flex items-center justify-center">
+            <span className="block w-8 h-1 bg-main-blue absolute -rotate-45"></span>
+            <span className="block w-8 h-1 bg-main-blue absolute rotate-45"></span>
+          </div>
+        ) : (
+          <div className="space-y-1.5 cursor-pointer h-10 w-10 flex items-center flex-col justify-center">
+            <span className="block w-8 h-1 bg-main-blue"></span>
+            <span className="block w-8 h-1 bg-main-blue"></span>
+            <span className="block w-8 h-1 bg-main-blue"></span>
+          </div>
+        )}
       </div>
     </header>
   );
-}
+};
 
 export default Header;

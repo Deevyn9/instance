@@ -1,19 +1,23 @@
-import React, {useState} from 'react';
-import Nav from './components/SideNav';
-import Header from './components/Header';
+import React, { useState } from "react";
+import Nav from "./components/SideNav";
+import Header from "./components/Header";
+
+interface Props {
+  clickHandler: () => void;
+}
 
 function App() {
-  const [ toggle, setToggle ] = useState(false);
+  const [toggle, setToggle] = useState<boolean>(false);
 
   const clickHandler = () => {
-    setToggle(!toggle)
-  }
+    setToggle(!toggle);
+  };
 
   return (
     <div className="flex">
-      <Nav />
+      <Nav toggle={toggle} />
       <div className="flex flex-col">
-        <Header />
+        <Header clickHandler={clickHandler} toggle={toggle} />
       </div>
     </div>
   );
