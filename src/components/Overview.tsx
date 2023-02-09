@@ -21,7 +21,7 @@ interface Props {
 
 const Overview: React.FC<Props> = ({setTrue, setFalse, showCard}) => {
   return (
-    <div className="overview__height bg-gray-back py-3 px-3 lg:py-6 lg:px-9 flex flex-col items-center xl:items-start">
+    <div className="overview__height bg-gray-back py-3 px-3 lg:py-6 lg:px-9 flex flex-col sm:items-center xl:items-start">
       <h1 className="font-bold text-3xl">Overview</h1>
       <div className="flex flex-wrap w-full mt-7 justify-center xl:justify-start gap-5">
         {/* wallets area */}
@@ -299,6 +299,8 @@ const Overview: React.FC<Props> = ({setTrue, setFalse, showCard}) => {
               </div>
             </div>
             {!showCard ? (
+
+                // ongoing Tx
               <div className="mt-5">
                 <div className="flex items-center justify-between py-2 border-b-2 border-gray-border">
                   <div className="flex flex-col">
@@ -330,6 +332,8 @@ const Overview: React.FC<Props> = ({setTrue, setFalse, showCard}) => {
                 </div>
               </div>
             ) : (
+
+                // AUthorize Tx
               <div className="mt-5">
                 <div className="bg-gray-100 py-1 px-3 rounded-xl mt-12">
                   <div className="flex items-center justify-between">
@@ -358,7 +362,7 @@ const Overview: React.FC<Props> = ({setTrue, setFalse, showCard}) => {
                   </div>
                 </div>
                 <div className="flex mt-8 text-lg justify-evenly">
-                  <button className="cursor-pointer w-40 h-12 bg-main-blue text-white rounded-r-full rounded-l-full">
+                  <button className="cursor-pointer w-36 h-12 bg-main-blue text-white rounded-r-full rounded-l-full">
                     Approve
                   </button>
                   <button className="cursor-pointer">Decline</button>
