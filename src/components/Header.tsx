@@ -1,4 +1,7 @@
 import React from "react";
+import notification from "../assets/Notification.svg"
+import Picture from "../assets/picture.svg"
+import dwonArrow from "../assets/Arrow Down.svg"
 
 interface Props {
   clickHandler: () => void;
@@ -7,7 +10,7 @@ interface Props {
 
 const Header: React.FC<Props> = ({ toggle, clickHandler }) => {
   return (
-    <header className="calc-width w-screen h-20 items-center flex px-3">
+    <header className="calc-width justify-between xl:justify-end w-screen xl:w-full h-20 items-center flex px-3 xl:px-10">
       {/* Creating a burger menu for mobile to toggle the side nav */}
       <div onClick={clickHandler} className="z-50 xl:hidden">
         {toggle ? (
@@ -22,6 +25,16 @@ const Header: React.FC<Props> = ({ toggle, clickHandler }) => {
             <span className="block w-8 h-1 bg-main-blue"></span>
           </div>
         )}
+      </div>
+
+      {/* right part of the header */}
+      <div className="flex justify-self-end gap-5 items-center">
+        <img src={notification} alt="notiicaton" />
+        <div className="flex gap-1 items-center">
+            <img src={Picture} alt="profile pic" />
+            <p className="font-bold">Timothy</p>
+            <img src={dwonArrow} alt="down arrow" />
+        </div>
       </div>
     </header>
   );

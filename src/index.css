@@ -7,14 +7,14 @@
   
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 640px) {
   .forced__width {
     max-width: 650px;
   }
 }
 
 @media (min-width: 1280px) {
-  .calc-width {
+  /* .calc-width {
     width: calc(100vw - 24rem);
-   }
+   } */
 }
