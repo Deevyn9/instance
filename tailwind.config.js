@@ -15,6 +15,8 @@ module.exports = {
         "table-text": "#8F8F8F",
         "up-arrow-bg": "#FFF1F1",
         "down-arrow-bg": "#E3FFF3",
+        "wallet-first": "#EBE3FF",
+        "wallet-border": "#444658",
       },
     },
   },

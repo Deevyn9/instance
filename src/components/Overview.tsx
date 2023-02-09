@@ -41,7 +41,12 @@ const Overview = () => {
             </div>
             <div className="w-full bg-purple-500 overflow-hidden">
               <div className="bg-red-500 w-full gap-5 flex overflow-scroll">
-                <div className="border-2 w-64 flex-shrink-0 h-64 rounded-xl"></div>
+                <div className="bg-wallet-first border-2 w-64 flex-shrink-0 h-64 rounded-xl p-3">
+                    <div className="flex items-center pt-2 pb-5 border-b-2 border-wallet-border border-dashed">
+                        <img src={usdt} alt="usdt" />
+                        <p className="font-bold text-lg ml-3">$548 <span className="text-table-text ml-1 text-sm font-thin">USDT</span></p>
+                    </div>
+                </div>
                 <div className="border-2 w-64 flex-shrink-0 h-64 rounded-xl"></div>
                 <div className="border-2 w-64 flex-shrink-0 h-64 rounded-xl"></div>
               </div>
