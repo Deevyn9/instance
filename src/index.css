@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.overview__height {
+  min-height: calc(100vh - 5rem);
+  
+}
+
 @media (min-width: 1024px) {
+  .forced__width {
+    max-width: 650px;
+  }
+}
+
+@media (min-width: 1280px) {
   .calc-width {
     width: calc(100vw - 24rem);
-    /* height: 80px;
-    border: 2px solid rgb(248, 113, 113); */
-  }
+   }
 }

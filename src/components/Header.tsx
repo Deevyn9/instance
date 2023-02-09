@@ -7,9 +7,9 @@ interface Props {
 
 const Header: React.FC<Props> = ({ toggle, clickHandler }) => {
   return (
-    <header className="calc-width w-screen border-2 border-red-400 h-20 items-center flex px-3">
+    <header className="calc-width w-screen h-20 items-center flex px-3">
       {/* Creating a burger menu for mobile to toggle the side nav */}
-      <div onClick={clickHandler} className="z-50 lg:hidden">
+      <div onClick={clickHandler} className="z-50 xl:hidden">
         {toggle ? (
           <div className="cursor-pointer relative h-10 w-10 flex items-center justify-center">
             <span className="block w-8 h-1 bg-main-blue absolute -rotate-45"></span>
